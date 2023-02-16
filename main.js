@@ -13,8 +13,8 @@ document.getElementById('id-moon').onclick = function(){
     this.classList.add('active')
 }
 
-const P1 = prompt("Ingresar jugador 1:")
-const P2 = prompt("Ingresar jugador 2:")
+const P1 = prompt("Ingresar jugador X:")
+const P2 = prompt("Ingresar jugador O:")
 const x = "X";
 const o = "O";
 let estadoJuego = P1;
@@ -80,7 +80,7 @@ function ganar(combinacionGanadora){
     combinacionGanadora.forEach(posicion => {
         cuadrados[posicion].classList.toggle("ganador", true);
     })
-    mostrarModal("Ganador: "+ estadoJuego);
+    mostrarModal("Ganador: '"+ estadoJuego + "'");
     estadoJuego = "PAUSA";
 }
 

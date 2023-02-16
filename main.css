@@ -3,14 +3,14 @@
 :root{
     --color-primario: rgb(28, 0, 34);
     --line-style: 6px solid rgb(28, 0, 34);
-    --fuente-Primaria: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    --fuente-Primaria: 'Raleway', sans-serif;
 }
 
 
 
 body{
     user-select: none;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Raleway', sans-serif;
     background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
     margin: 0;
     height: 100vh;
@@ -78,38 +78,62 @@ h1{
 dialog {
     color: var(--color-primario);
     text-align: center;
-    min-width: 50vw;
+    min-width: 30vw;
     background-color: rgba(240, 242, 255, 0.834);
     padding: 2.5rem;
-    border: unset;
+    border: 2px solid #000;
     border-radius: 10px;
+}
+
+.dark-mode dialog{
+    background-color: rgba(0, 0, 0, 0.2);
+    color: #eee;
+    border: 2px solid #EEE;
 }
 
 dialog h2 {
     font-family: var(--fuente-Primaria);
-    font-size: xx-large;
+    font-size: xxx-large;
 
 }
 
 dialog button{
     font-family: var(--fuente-Primaria);
-    font-size: larger;
     padding: 1rem;
-    
+    border-radius: 10px;
+    font-size: x-large;
+    font-weight: bold;
+    border: 2px solid #000;
+    background-color: rgba(128, 200, 0, 0.6);
+    cursor: pointer;
+}
+
+dialog button:hover{
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+}
+
+
+
+.dark-mode dialog button{
+    background-color: rgba(128, 200, 0, 0.6);
+    color: #eee;
+    border: 2px solid #eee;
 }
 
 dialog::backdrop{
-    backdrop-filter: blur(3px);
+    backdrop-filter: blur(5px);
 }
 
 .container-btn-mode{
     position: absolute;
     top:20px;
     right: 20px;
-    cursor: pointer;
     z-index: 2;
     font-size:0;
 }
+
+
 
 .btn-mode{
     display: inline-block;
@@ -140,15 +164,18 @@ dialog::backdrop{
 .sun{
     color:#ffcd5c !important;
     background-color: transparent;
+    cursor: pointer;
 }
 
 .moon{
     color:#553e80 !important;
     background-color: transparent;
+    cursor: pointer;
 }
 
 .sun.active{
-    background-color: #1A1C1E
+    background-color: #1A1C1E;
+    cursor: default;
 }
 
 .sun.transparent{
@@ -156,7 +183,8 @@ dialog::backdrop{
 }
 
 .moon.active{
-    background-color: #1A1C1E
+    background-color: #1A1C1E;
+    cursor: default;
 }
 
 .dark-mode{
@@ -171,6 +199,10 @@ dialog::backdrop{
 .dark-mode h1{
     color: #000;
     border-bottom: 5px solid #000;
+}
+
+.dark-mode .cuadrado{
+    color: #000;
 }
 
 .dark-mode .btn-mode{
