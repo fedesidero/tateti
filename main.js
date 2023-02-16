@@ -13,8 +13,8 @@ document.getElementById('id-moon').onclick = function(){
     this.classList.add('active')
 }
 
-// const P1 = prompt("Ingresar jugador 1:")
-// const P2 = prompt("Ingresar jugador 2:")
+const P1 = prompt("Ingresar jugador 1:")
+const P2 = prompt("Ingresar jugador 2:")
 const x = "X";
 const o = "O";
 let estadoJuego = P1;
