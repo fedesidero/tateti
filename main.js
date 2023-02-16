@@ -1,11 +1,27 @@
-const P1 = prompt("Ingresar jugador 1:")
-const P2 = prompt("Ingresar jugador 2:")
+document.getElementById('id-sun').onclick = function(){
+    document.getElementById('body').classList.remove('dark-mode')
+    document.getElementById('id-moon').classList.remove('active')
+    document.getElementById('id-sun').classList.remove('transparent')
+
+    this.classList.add('active')
+}
+
+document.getElementById('id-moon').onclick = function(){
+    document.getElementById('body').classList.add('dark-mode')
+    document.getElementById('id-sun').classList.remove('active')
+    document.getElementById('id-sun').classList.add("transparent")
+    this.classList.add('active')
+}
+
+// const P1 = prompt("Ingresar jugador 1:")
+// const P2 = prompt("Ingresar jugador 2:")
 const x = "X";
 const o = "O";
 let estadoJuego = P1;
 const cuadrados = Array.from(document.querySelectorAll(".cuadrado"));
 const modal = document.querySelector("dialog");
 const textoModal = modal.querySelector("h2");
+
 
 cuadrados.forEach((cuadrado, i) => {
     cuadrado.addEventListener("click", ()=>{
